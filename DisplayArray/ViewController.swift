@@ -21,5 +21,22 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var nameTextBox: UITextField!
+    
+    
+    @IBAction func addButtonTap(sender: AnyObject) {
+        
+        let value = nameTextBox.text
+
+        /*
+        var vals = ValueList.Values
+        vals.append(value!)
+        
+        ValueList.Values = vals
+        */
+        ValueList.Values.append(value!)
+        
+        self.dismissViewControllerAnimated(true, completion: {})
+    }
 }
 
